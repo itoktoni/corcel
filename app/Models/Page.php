@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Corcel\Model\Page as Model;
+use Corcel\Model\Page as Corcel;
 
-class Page extends Model
+class Page extends Corcel
 {
-    //
 }
