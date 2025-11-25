@@ -1,0 +1,6 @@
+type: php
+name: cms
+public: .
+rewrites:
+  - uri: /cms/(.*)
+    rewrite: /cms/index.php
