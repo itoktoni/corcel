@@ -4,7 +4,7 @@ namespace App\Facades\Model;
 
 use Illuminate\Support\Facades\Facade;
 
-class CategoryModel extends \App\Dao\Models\Category
+class JadwalModel extends \App\Dao\Models\Jadwal
 {
     protected static function getFacadeAccessor()
     {

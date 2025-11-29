@@ -10,7 +10,7 @@ trait CrudRepository
     public function dataRepository()
     {
         $query = $this
-            ->select($this->getSelectedField())
+            ->select($this->getTable() . '.*')
             ->filter();
 
         $query = env('PAGINATION_SIMPLE') ? $query->simplePaginate(env('PAGINATION_NUMBER')) : $query->paginate(env('PAGINATION_NUMBER'));

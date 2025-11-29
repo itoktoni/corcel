@@ -8,8 +8,7 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $menu = TopMenu::slug('header')->showSql()->get();
-        dd($menu);
+        $menu = TopMenu::slug('header')->get();
         return view('homepage');
     }
 }

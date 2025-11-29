@@ -219,3 +219,24 @@ body {
     padding-bottom: 0.5rem !important;
   }
 }
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width:8; /* Adjust width for vertical scrollbar */
+  height:8; /* Adjust height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

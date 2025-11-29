@@ -19,7 +19,8 @@
 		width: $small-navigation-width;
 		display: flex;
 		flex-direction: column;
-		padding-bottom: 10px;
+		padding-bottom: 7px;
+		overflow-y: scroll;
 
 		.navigation-menu-tab-header {
 			height: $header-height;
@@ -39,7 +40,7 @@
 				a {
 					color: white;
 					display: flex;
-					min-height: 9rem;
+					min-height: 8rem;
 					justify-content: center;
 					flex-direction: column;
 					align-items: center;

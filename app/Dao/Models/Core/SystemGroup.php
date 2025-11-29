@@ -17,6 +17,8 @@ class SystemGroup extends SystemModel
 
     protected $keyType = 'string';
 
+    public $incrementing = false;
+
     protected $fillable = [
         'system_group_code',
         'system_group_name',

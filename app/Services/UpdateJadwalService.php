@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Services\Master;
+namespace App\Services;
 
 use Plugins\Alert;
 
-class UpdateService
+class UpdateJadwalService
 {
-    public function update($model, $data, $code)
+    public function update($repository, $data, $code)
     {
-        $check = $model->updateRepository($data->all(), $code);
+        $check = $repository->updateRepository($data->all(), $code);
         if ($check['status']) {
+            $check['data']->has_absen()->sync($data->user);
+
             if (request()->wantsJson()) {
                 return response()->json($check)->getData();
             }
-
             Alert::update();
-
         } else {
             Alert::error($check['message']);
         }

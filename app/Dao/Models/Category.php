@@ -4,23 +4,24 @@ namespace App\Dao\Models;
 
 use App\Dao\Models\Core\SystemModel;
 
+
 /**
  * Class Category
  *
  * @property $category_id
  * @property $category_name
- * @property $category_user_id
- * @property User $user
  *
+ * @property Asset.penamaan[] $asset.penamaan
+ * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
+
 class Category extends SystemModel
 {
     protected $perPage = 20;
-
     protected $table = 'category';
-
     protected $primaryKey = 'category_id';
+    public $incrementing = true;
 
     /**
      * The attributes that are mass assignable.

@@ -22,7 +22,6 @@ class RolesController extends MasterController
 
     protected function beforeForm()
     {
-
         $group = GroupModel::getOptions();
         $level = LevelType::getOptions();
 

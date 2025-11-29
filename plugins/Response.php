@@ -3,6 +3,7 @@
 namespace Plugins;
 
 use Coderello\SharedData\Facades\SharedData;
+use Hamcrest\Type\IsObject;
 use Illuminate\Support\Facades\Route;
 
 class Response

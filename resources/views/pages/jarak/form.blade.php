@@ -6,7 +6,8 @@
             <div class="row">
                 @bind($model)
 
-                <x-form-input col="6" name="category_name" />
+                <x-form-input col="6" name="jarak_code" />
+                <x-form-input col="6" name="jarak_nama" />
 
                 @endbind
             </div>

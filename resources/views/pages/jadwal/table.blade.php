@@ -22,11 +22,12 @@
                                         <input class="btn-check-d" type="checkbox">
                                     </th>
                                     <th class="text-center column-action">{{ __('Action') }}</th>
-                                    @foreach ($fields as $value)
-                                        <th {{ Template::extractColumn($value) }}>
-                                            {{ __($value->name) }}
-                                        </th>
-                                    @endforeach
+                                    <th>
+                                        Tanggal
+                                    </th>
+                                    <th>
+                                        Keterangan
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,10 +37,13 @@
                                             <input type="checkbox" class="checkbox" name="code[]"
                                                 value="{{ $table->field_primary }}">
                                         </td>
-                                        <td class="col-md-2 text-center column-action">
+                                        <td data-label="Action" class="col-md-2 text-center column-action">
                                             <x-crud :model="$table" />
                                         </td>
-                                        {{tableBody}}
+
+										<td data-label="Tanggal">{{ $table->jadwal_tanggal }}</td>
+										<td data-label="Keterangan">{{ $table->jadwal_keterangan }}</td>
+
                                     </tr>
                                 @empty
                                 @endforelse

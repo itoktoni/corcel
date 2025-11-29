@@ -58,7 +58,7 @@ class Notes
         $log['code'] = 200;
         $log['name'] = self::create;
         $log['message'] = 'Data berhasil di buat';
-        $log['data'] = $data->getAttributes();
+        $log['data'] = $data;
         if (self::checkDebug()) {
             Log::info(self::create, $log);
         }
